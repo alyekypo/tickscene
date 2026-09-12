@@ -1,0 +1,58 @@
+{
+  "name": "tickframe",
+  "version": "0.0.0",
+  "description": "SVG-only animation engine for charts, diagrams and graphics",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "./dist/define.js",
+    "./dist/dev/define.js"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "development": "./dist/dev/index.js",
+      "default": "./dist/index.js"
+    },
+    "./define": {
+      "types": "./dist/define.d.ts",
+      "development": "./dist/dev/define.js",
+      "default": "./dist/define.js"
+    },
+    "./export": {
+      "types": "./dist/export/index.d.ts",
+      "development": "./dist/dev/export/index.js",
+      "default": "./dist/export/index.js"
+    },
+    "./export/bake": {
+      "types": "./dist/export/bake/index.d.ts",
+      "development": "./dist/dev/export/bake/index.js",
+      "default": "./dist/export/bake/index.js"
+    },
+    "./kit/*": {
+      "types": "./dist/kit/*/index.d.ts",
+      "development": "./dist/dev/kit/*/index.js",
+      "default": "./dist/kit/*/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "node node_modules/typescript/bin/tsc --noEmit",
+    "test:l1": "vitest run --project l1",
+    "test": "vitest run",
+    "size": "size-limit"
+  },
+  "devDependencies": {
+    "@size-limit/esbuild": "13.0.3",
+    "@size-limit/file": "13.0.3",
+    "@types/node": "24.13.4",
+    "@typescript/typescript6": "6.0.2",
+    "size-limit": "13.0.3",
+    "tsdown": "0.23.0",
+    "typescript": "7.0.2",
+    "vitest": "5.0.0"
+  }
+}
