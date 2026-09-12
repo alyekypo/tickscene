@@ -22,6 +22,8 @@ Every module respects this dependency order:
 - Kits import only the public API of `.`.
 - DOM-free set: `types`, `easing`, `scale`, `clock`, `compile`, `evaluate`. These run in Node with `requestAnimationFrame`, `now` and `measure` injected.
 
+The order is enforced by `eslint-plugin-boundaries` (`eslint.config.js`); see [design rules — layer order](../development/design-rules.md#layer-order).
+
 Modules implemented so far:
 
 | Module | Entry | DOM-free | Depends on | Contents |
@@ -45,16 +47,20 @@ Only `.` resolves today: `scripts/entries.mjs` derives the build list from the e
 ## Repository layout
 
 ```
-package.json  tsconfig.json  tsdown.config.ts  vitest.config.ts  .size-limit.js  LICENSE  .gitignore
+package.json  tsconfig.json  tsdown.config.ts  vitest.config.ts  .size-limit.js  eslint.config.js  knip.json  LICENSE  .gitignore
 scripts/entries.mjs
 src/types.ts
 src/index.ts
 test/l1/entries.test.ts
 test/l1/types.test-d.ts
+test/l1/design-rules/lint-rules.test.ts
+test/l1/design-rules/import-in-node.test.ts
+test/fixtures/lint/*.txt
 .github/workflows/ci.yml
 docs/README.md
 docs/architecture/overview.md
 docs/development/setup.md
+docs/development/design-rules.md
 ```
 
 Module directories are created by the prompt implementing them.
