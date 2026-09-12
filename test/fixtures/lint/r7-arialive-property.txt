@@ -1,0 +1,3 @@
+export function announce(el: HTMLElement): void {
+  el.ariaLive = 'polite';
+}

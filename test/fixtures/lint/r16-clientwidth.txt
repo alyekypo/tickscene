@@ -1,0 +1,3 @@
+export function width(el: Element): number {
+  return el.clientWidth;
+}

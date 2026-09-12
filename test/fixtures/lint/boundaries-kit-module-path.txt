@@ -1,0 +1,3 @@
+import type { Tick } from '../../types';
+
+export type Y = Tick;

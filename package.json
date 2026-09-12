@@ -43,7 +43,8 @@
     "typecheck": "node node_modules/tsc7/bin/tsc --noEmit",
     "test:l1": "vitest run --project l1",
     "test": "vitest run",
-    "size": "size-limit"
+    "size": "size-limit",
+    "lint": "eslint . && knip"
   },
   "devDependencies": {
     "@eslint/markdown": "8.0.3",

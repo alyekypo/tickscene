@@ -1,0 +1,3 @@
+import type { X } from './index';
+
+export type Y = X;

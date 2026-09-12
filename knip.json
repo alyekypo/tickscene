@@ -1,0 +1,19 @@
+{
+  "entry": [
+    "src/index.ts",
+    "src/define.ts",
+    "src/export/index.ts",
+    "src/export/bake/index.ts",
+    "src/kit/*/index.ts",
+    "scripts/*.mjs",
+    "test/**/*.test.ts",
+    "test/**/*.test-d.ts",
+    "tsdown.config.ts",
+    "vitest.config.ts",
+    ".size-limit.js",
+    "eslint.config.js"
+  ],
+  "project": ["src/**/*.ts", "scripts/**/*.mjs", "test/**/*.ts"],
+  "ignoreDependencies": ["@typescript/typescript6", "@size-limit/esbuild"],
+  "ignoreExportsUsedInFile": true
+}

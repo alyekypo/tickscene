@@ -1,0 +1,2 @@
+// eslint-disable-next-line no-restricted-syntax -- R16: nothing on this line needs it
+export const n = 1;

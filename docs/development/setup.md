@@ -55,7 +55,9 @@ The build fails when an entry named by `entries()` has no source or when a type 
 In `src/`, dev-only assertions and warnings are written as
 
 ```ts
-if (import.meta.env.DEV) { ... }
+if (import.meta.env.DEV) {
+  console.warn('tickframe: the message');
+}
 ```
 
 The published configuration defines `'import.meta.env.DEV'` as `'false'` and the dev configuration as `'true'`, so neither `dist/` nor `dist/dev/` contains the text `import.meta.env` and importing a published entry never touches `import.meta.env` at runtime. Under Vitest `import.meta.env.DEV === true` (Vite's default for test mode); nothing overrides it.

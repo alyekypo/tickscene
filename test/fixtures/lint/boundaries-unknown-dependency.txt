@@ -1,0 +1,3 @@
+import { entries } from '../../scripts/entries.mjs';
+
+export const built = entries;

@@ -1,0 +1,9 @@
+# Snippet
+
+A fenced block that the R12 block must reach through the Markdown processor.
+
+```ts
+export function jitter(): number {
+  return Math.random();
+}
+```

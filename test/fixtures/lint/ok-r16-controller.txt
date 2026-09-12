@@ -1,0 +1,3 @@
+export function width(t: SVGTextContentElement): number {
+  return t.getComputedTextLength();
+}
